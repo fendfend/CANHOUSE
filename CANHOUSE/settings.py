@@ -13,6 +13,18 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 from pathlib import Path
 ### ADD ###
 import os
+# + chapter 32 | Create Register
+from pathlib import Path
+from django.contrib.messages import constants as messages
+
+
+# Last Line
+
+MESSAGE_TAGS = {
+    messages.ERROR: 'danger',
+    messages.SUCCESS: 'SUCCESS'
+}
+# +
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -43,6 +55,9 @@ INSTALLED_APPS = [
     'pages.apps.PagesConfig',
     'listings.apps.ListingsConfig', 
     'realtors.apps.RealtorsConfig',
+    # +
+    'accounts.apps.AccountsConfig',
+    'contacts.apps.ContactsConfig',
 ]
 
 MIDDLEWARE = [
